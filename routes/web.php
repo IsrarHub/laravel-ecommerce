@@ -4,6 +4,7 @@ use App\Http\Controllers\UserController;
 
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,12 @@ Route::get('/',[ProductController::class,"index"]);
 Route::get('/login', function () {
     return view('login');
 });
+Route::get('/logout', function () {
+    Session::forget('user');
+    return view('login');
+});
 
 Route::post('/login',[UserController::class,'login'])->name('User.login');
+Route::get('/detail/{id}',[ProductController::class,'details']);
+Route::get("/search",[ProductController::class,'search']);
+Route::post('/add_to_cart',[ProductController::class,'addTocart']);

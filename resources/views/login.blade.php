@@ -1,8 +1,8 @@
 @extends('master')
 @section('content')
-<div class="container">
+<div class="container custom-login">
   <div class="row">
-    <div class="col-sm-4 offset-sm-4 custom-login">
+    <div class="col-sm-4 offset-sm-4 ">
       <form action="{{ route('User.login') }}" method="Post">
         @csrf
         <div class="form-group">

@@ -1,4 +1,4 @@
-<div class="card">
+<div  style="clear:both" class="card">
   
   <div class="card-body">
     supporting text below as a natural lea
